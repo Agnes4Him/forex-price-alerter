@@ -1,0 +1,241 @@
+body {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-size:16px;
+  font-family: 'Poppins', sans-serif;
+  background-color:#222;
+  color:#f5f5f5;
+}
+
+.nav-container {
+  background-color:#ff647f; /*#FFA3B8  #FF92A5 #F4C2C2 */
+  display:flex;
+  justify-content:center;
+}
+
+.nav-container h1 {
+  color:#f5f5f5;
+  font-family: 'Pacifico', cursive;
+  font-size:1.75rem;
+}
+
+.input-container {
+  margin: auto;
+  width:60vw;
+}
+
+.currency-timeframe {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:5rem;
+  margin-bottom:5rem;
+  width:100%;
+}
+
+.currency {
+  width:25vw;
+}
+
+.currency form {
+  display:flex;
+  width:100%;
+  justify-content:space-between;
+}
+
+.timeframe {
+  width:15vw;
+  text-align:center;
+}
+
+.currency h4 {
+  text-align:center;
+}
+
+.base-currency, .quote-currency {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.base-currency input, .quote-currency input {
+  width:5vw;
+  border:none;
+  margin-top:1rem;
+  padding:0.75rem 0;
+  text-align:center;
+  cursor: pointer;
+}
+
+.timeframe-content select {
+  padding:0.5rem;
+  text-align:center;
+  border:none;
+  margin-top:1rem;
+  color:#ff647f;
+}
+
+.base-currency input:focus {
+  border:none;
+}
+
+.load-btn {
+  text-align:center;
+}
+
+.load-btn button {
+  padding:0.5rem 2rem 0.5rem 2rem;
+  border:none;
+  border-radius:16px;
+  background-color:#FF92A5;
+  color:#f5f5f5;
+  font-size:1rem;
+}
+
+.load-btn button:hover {
+  background:transparent;
+  color: #F4C2C2;
+}
+
+.base-container {
+  height:20vh;
+  position:absolute;
+  top:65vh;
+  left:22vw;
+  overflow-y: auto;
+  /*border:1px solid #F4C2C2; */
+  font-size:0.75rem;
+}
+
+.symbol {
+  cursor: pointer;
+}
+
+.quote-container {
+  height:20vh;
+  background-color:#FF92A5;
+  position:absolute;
+  top:65vh;
+  left:32vw;
+  overflow-y: auto;
+}
+
+.chart-container h2 {
+  text-align:center;
+  margin-top:7rem;
+}
+
+.chart-container p {
+  text-align:center;
+}
+
+.chart-container hr {
+  width:20vw;
+  margin-bottom:5rem;
+}
+
+.alert-container {
+  margin:auto;
+  width:60vw;
+}
+
+.alert-container h3 {
+  text-align:center;
+  margin-bottom:3rem;
+}
+
+.target-price {
+  width:15vw;
+}
+
+.target-price form {
+  width:100%;
+}
+
+.target-price input {
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+  width:100%;
+}
+
+.target-btn {
+  width:100%;
+  text-align:center;
+  margin-top:2rem;
+}
+
+.target-btn button {
+  padding:0.4rem 1.75rem 0.4rem 1.75rem;
+  border-radius:16px;
+  border:1px solid #FF92A5;
+  background-color:transparent;
+  color:#F4C2C2;
+  font-size:1rem;
+}
+
+.target-btn button:hover {
+  background-color:#FF92A5;
+  border:none;
+  color:#f5f5f5;
+}
+
+.alert {
+  display:flex;
+  justify-content:space-between;
+}
+
+.toggle-off {
+  font-size:2rem;
+}
+
+.toggle-on {
+  font-size:2rem;
+  color:#ff647f;
+}
+
+.get-email {
+  margin:auto;
+  width:45vw;
+  text-align:center;
+  padding-top:5rem;
+}
+
+.get-email input {
+  border:none;
+  padding:0.75rem;
+  width:20vw;
+  margin-right:2rem;
+}
+
+.get-email button {
+  border:none;
+  padding:0.5rem 1rem 0.5rem 1rem;
+  border-radius:16px;
+  background-color:#F4C2C2;
+  font-size:1rem;
+}
+
+.get-email button:hover {
+  background-color:transparent;
+  border:1px solid #F4C2C2;
+  color:#F4C2C2;
+}
+
+.footer-container {
+  background-color:#FF92A5;
+  color:#f5f5f5;
+  margin-top:5rem;
+  text-align: center;
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
+
+.symbols-error {
+  position:absolute;
+  right:20vw;
+  top:75vh;
+  color:red;
+  font-weight:bold;
+}

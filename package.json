@@ -1,0 +1,19 @@
+{
+  "name": "price-alerter",
+  "version": "1.0.0",
+  "description": "A forex price alerter app built with React and NodeJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "Agnes",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "node-fetch": "^2.6.7",
+    "nodemon": "^2.0.19"
+  }
+}
