@@ -1,13 +1,31 @@
 import { useState } from 'react'
 
-const CurrencyDropDown = ({baseCurrency, quoteCurrency, changeBase, changeQuote, onGetBase, onGetQuote, editBaseValue, symbols}) => {
+const CurrencyDropDown = ({baseCurrency, quoteCurrency, changeBase, changeQuote, onGetBase, onGetQuote, editBaseValue, editQuoteValue, bsymbols, qsymbols}) => {
 
-    const [showList, setShowList] = useState(true)
+    const [showBaseList, setShowBaseList] = useState(true)
+    const [showQuoteList, setShowQuoteList] = useState(true)
+
+    const handleOnGetBase = () => {
+        onGetBase()
+        setShowBaseList(true)
+    }
+
+    const handleOnGetQuote = () => {
+        onGetQuote()
+        setShowQuoteList(true)
+    }
 
     const handleEditBaseValue = (e) => {
         editBaseValue(e.target.innerText)
         setTimeout(() => {
-            setShowList(false)
+            setShowBaseList(false)
+        }, 1000)
+    }
+
+    const handleEditQuoteValue = (e) => {
+        editQuoteValue(e.target.innerText)
+        setTimeout(() => {
+            setShowQuoteList(false)
         }, 1000)
     }
 
@@ -21,11 +39,11 @@ const CurrencyDropDown = ({baseCurrency, quoteCurrency, changeBase, changeQuote,
                     readOnly
                     value={baseCurrency}
                     onChange={changeBase}
-                    onClick={onGetBase}
+                    onClick={handleOnGetBase}
                     />
-                    { showList && <div className="base-container">
-                        {symbols.map((symbol, index) =>
-                        <div className="symbol" key={index} onClick={handleEditBaseValue}>{symbol}</div>
+                    { showBaseList && <div className="base-container">
+                        {bsymbols.map((bsymbol, index) =>
+                        <div className="base-symbol" key={index} onClick={handleEditBaseValue}>{bsymbol}</div>
                         )}
                     </div>}
                 </div>
@@ -35,8 +53,13 @@ const CurrencyDropDown = ({baseCurrency, quoteCurrency, changeBase, changeQuote,
                     readOnly
                     value={quoteCurrency}
                     onChange={changeQuote}
-                    onClick={onGetQuote}
+                    onClick={handleOnGetQuote}
                     />
+                    { showQuoteList && <div className="quote-container">
+                        {qsymbols.map((qsymbol, index) =>
+                        <div className="quote-symbol" key={index} onClick={handleEditQuoteValue}>{qsymbol}</div>
+                        )}
+                    </div>}
                 </div>
             </form>
         </div>

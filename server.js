@@ -2,6 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv')
 const cors = require('cors')
 const currencyRoute = require('./src/routes/currencyRoute')
+const chartRoute = require('./src/routes/chartRoute')
 
 dotenv.config()
 
@@ -13,6 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 app.use(currencyRoute)
+app.use(chartRoute)
 
 app.use((err, req, res, next) => {
     console.log(err)
