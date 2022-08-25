@@ -259,3 +259,17 @@ body {
   color:red;
   font-weight:bold;
 }
+
+.success-message {
+  color:green;
+  font-weight:bold;
+  text-align:center;
+  margin-top:5vh;
+}
+
+.alert-error {
+  color:red;
+  font-weight:bold;
+  text-align:center;
+  margin-top:5vh;
+}

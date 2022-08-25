@@ -106,5 +106,3 @@ exports.getPrices = (req, res) => {
         })
     }
 }
-
-//<ForexChart chartValues={chartValues} />

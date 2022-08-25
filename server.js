@@ -3,6 +3,8 @@ const dotenv = require('dotenv')
 const cors = require('cors')
 const currencyRoute = require('./src/routes/currencyRoute')
 const chartRoute = require('./src/routes/chartRoute')
+const liveDataRoute = require('./src/routes/liveDataRoute')
+const sendEmailRoute = require('./src/routes/sendEmailRoute')
 
 dotenv.config()
 
@@ -15,6 +17,8 @@ app.use(express.urlencoded({extended:true}))
 
 app.use(currencyRoute)
 app.use(chartRoute)
+app.use(liveDataRoute)
+app.use(sendEmailRoute)
 
 app.use((err, req, res, next) => {
     console.log(err)
